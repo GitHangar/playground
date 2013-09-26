@@ -12,14 +12,14 @@ from pisi.actionsapi import get
 WorkDir = "."
 def setup():
   
-      shelltools.cd("flareget_2.0-15_x86_64(stable)_rpm")
+      shelltools.cd("flareget_2.1-18_x86_64(stable)_rpm")
       shelltools.system("rpm2targz flaremonitor-1.0-2.x86_64.rpm")
-      shelltools.system("rpm2targz flareget-2.0-15.x86_64.rpm")
+      shelltools.system("rpm2targz flareget-2.1-18.x86_64.rpm")
       shelltools.system("tar xfvz flaremonitor-1.0-2.x86_64.tar.gz")
-      shelltools.system("tar xfvz flareget-2.0-15.x86_64.tar.gz")
+      shelltools.system("tar xfvz flareget-2.1-18.x86_64.tar.gz")
 
 def install():
-    shelltools.cd("flareget_2.0-15_x86_64(stable)_rpm")
+    shelltools.cd("flareget_2.1-18_x86_64(stable)_rpm")
     pisitools.insinto("/lib/","./lib/*")
     pisitools.insinto("/usr/bin/","./usr/bin/*")
     pisitools.insinto("/usr/sbin/","./usr/sbin/*")
